@@ -61,10 +61,13 @@ export default function FormFeedback(){
                 <form 
                 action="#"
                 className="w-[100%] md:w-[80%] mx-auto bg-[#FFFEE6] rounded-lg p-10 grid-cols-* md:mt-20" 
-                name='form-feedback' 
-                method='POST'
+                name="form-feedback"
+                method="post"
                 data-netlify="true"
+
                 >
+
+                <input type="hidden" name="form-name" value="form-feedback" />
 
                     <div>
                         
@@ -83,9 +86,9 @@ export default function FormFeedback(){
                         <label className="block mb-2 text-sm font-medium text-gray-900">Your email</label>
 
                         <input 
+                        id="email"
                         name='email' 
                         type="email" 
-                        id="email"
                         aria-describedby="helper-text-explanation" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@gmail.com"/>
 
                     </div>
@@ -119,7 +122,7 @@ export default function FormFeedback(){
                     <div className='flex justify-center text-center mt-10'>
                     
                     <div className='rounded-md bg-[#A5C3A7] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#D5E0B5] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-[80%] md:w-[60%]'>
-                        <button type='submit'>Submit</button>
+                        <button type='submit' value="form-feedback">Submit</button>
                     </div>
                 </div>
 
