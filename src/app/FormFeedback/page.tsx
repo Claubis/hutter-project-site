@@ -3,22 +3,57 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
-export default function FormFeedback(){
+interface FormData {
+    name: string;
+    email: string;
+    rating: number;
+    message: string;
+}
+
+interface Props {
+    onSubmit: (formData: FormData) => void;
+}
+
+export default function FormFeedback({ onSubmit }: Props){
 
     const [rating, setRating] = useState(0);
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        message: "",
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    
+    const handleName = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setName(event.target.value);
+    };
 
-      })
+    const handleEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setEmail(event.target.value);
+    };
+
+    const handleMessage = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+        setMessage(event.target.value);
+    };
+
+    const handleFeedbackFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+
+        // Mostrar no console minhas informações
+        console.log('Dados do formulário:', { name,email, rating, message  });
+
+        // Exibe um alerta personalizado após o envio do formulário
+        alert(name + ' seu feedback foi recebido com sucesso!\n '+ '\nDados ' + email + '\nNota: ' + rating + '\nDescrição: ' + message );
+
+        // Limpar o formulário após o envio
+        setName('');
+        setEmail('');
+        setRating(0);
+        setMessage('');
+    };
+
 
     type StarIconProps = {
         filled: boolean;
         onClick: () => void;
     };
-
-
 
     // Função para renderizar o ícone de estrela SVG
     const StarIcon = ({ filled, onClick }: StarIconProps) => (
@@ -45,17 +80,6 @@ export default function FormFeedback(){
     };
 
       
-    const handleSubmit = async (event:any) => {
-        event.preventDefault();
-    
-
-    };
-      
-    // Esta função lida com a mudança nos inputs do formulário
-    const handleInputChange = (e:any) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
 
     return(
 
@@ -90,7 +114,7 @@ export default function FormFeedback(){
                 name="form-feedback"
                 method="POST"
                 data-netlify="true"
-                onSubmit={handleSubmit}
+                onSubmit={handleFeedbackFormSubmit}
                 >
 
                 <input type="hidden" name="form-name" value="form-feedback" />
@@ -103,9 +127,9 @@ export default function FormFeedback(){
                         id='name'
                         name='name' 
                         type="text"
+                        value={name} onChange={handleName}
                         className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500"
-                        value={formData.name}
-                        onChange={handleInputChange}/>
+                        />
                     </div>
 
                     
@@ -117,9 +141,9 @@ export default function FormFeedback(){
                         id="email"
                         name='email' 
                         type="email" 
+                        value={email} onChange={handleEmail}
                         aria-describedby="helper-text-explanation" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@gmail.com"
-                        value={formData.email}
-                        onChange={handleInputChange}/>
+                        />
 
                     </div>
 
@@ -148,16 +172,20 @@ export default function FormFeedback(){
                         name='message' 
                         id="message" 
                         rows={8} 
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Leave a comment..."></textarea>
+                        value={message} onChange={handleMessage}
+                        className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" 
+                        placeholder="Leave a comment..."></textarea>
 
                     </div>
 
                     <div className='flex justify-center text-center mt-10'>
                     
-                    <div className='rounded-md bg-[#A5C3A7] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#D5E0B5] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-[80%] md:w-[60%]'>
-                        <button type='submit' id="submitBtn" value="form-feedback">Submit</button>
+                    <div>
+                        <button
+                        className='rounded-md bg-[#A5C3A7] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#D5E0B5] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-[100%] md:w-[100%]' 
+                        type='submit' 
+                        id="submitBtn" 
+                        value="form-feedback">Submit</button>
                     </div>
                 </div>
 
