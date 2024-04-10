@@ -1,15 +1,17 @@
 
-import imagem from '../../../../public/assets/Services/imagem1.png'
 
 export default function Services(){
 
     return (
 
-        <section className="max-w-[1440px]">
+        <section className="max-w-[1280px]">
             
             <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12 mt-20">
                 
-                <a rel="noopener noreferrer" href="#" className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50">
+                <a 
+                rel="noopener noreferrer" 
+                href="#"
+                className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50">
                     
                     <img 
                     src="/assets/Services/imagem1.png" 
@@ -19,6 +21,7 @@ export default function Services(){
                     <div className="p-6 space-y-2 lg:col-span-5">
 
                         <h3 className="text-6xl font-orelega mb-10">About our services</h3>
+                        
                         <p className='font-sen text-xl'>Our services are fully customized to meet your needs, offering flexible scheduling and availability to suit your convenience. Request a no-obligation quote and discover how we can assist you in the best way possible.</p>
                         
                     </div>
@@ -27,7 +30,10 @@ export default function Services(){
 
                 <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     
-                    <a rel="noopener noreferrer" href="#" className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50">
+                    <a 
+                    rel="noopener noreferrer" 
+                    href="#" 
+                    className="max-w-sm mx-auto">
                         
                         <img 
                         role="presentation" 
@@ -39,11 +45,15 @@ export default function Services(){
                             <h3 className="text-2xl font-orelega">Regular cleaning</h3>
                 
                             <p className='font-sen text-xl'>Tailored to your familys needs, our regular cleaning service keeps your home consistently fresh and welcoming.</p>
+
                         </div>
 
                     </a>
 
-                    <a rel="noopener noreferrer" href="#" className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50">
+                    <a 
+                    rel="noopener noreferrer" 
+                    href="#" 
+                    className="max-w-sm mx-auto">
                         
                         <img 
                         role="presentation" 
@@ -60,61 +70,86 @@ export default function Services(){
                         </div>
                     </a>
 
-                    <a rel="noopener noreferrer" href="#" className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50">
+                    <a 
+                    rel="noopener noreferrer" 
+                    href="#" 
+                    className="max-w-sm mx-auto">
                         
-                        <img role="presentation" className="object-cover w-full rounded h-44 dark:bg-gray-500" src="https://source.unsplash.com/random/480x360?3" />
-                        
-                        <div className="p-6 space-y-2">
-                            <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
-                            <span className="text-xs dark:text-gray-600">January 23, 2021</span>
-                            <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
-                        </div>
-
-                    </a>
-
-                    <a rel="noopener noreferrer" href="#" className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block">
-                        
-                        <img role="presentation" className="object-cover w-full rounded h-44 dark:bg-gray-500" src="https://source.unsplash.com/random/480x360?4" />
+                        <img 
+                        role="presentation" 
+                        className="object-fit w-full rounded h-44" 
+                        src="/assets/Services/imagem7.png" 
+                        alt="Imagem do serviço realizado" />
                         
                         <div className="p-6 space-y-2">
                             
-                            <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
-                            <span className="text-xs dark:text-gray-600">January 24, 2021</span>
-                            <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
+                            <h3 className="text-2xl font-orelega">Move-In & Move-Out</h3>
+                            
+                            <p className='font-sen text-xl'>Make your move smoother with Hutter Cleaning. We provide thorough cleaning for homes, apartments, and condos during move-ins and move-outs.</p>
+
+                        </div>
+
+                    </a>
+
+                    <a 
+                    rel="noopener noreferrer" 
+                    href="#" 
+                    className="max-w-sm mx-auto hidden sm:block">
+                        
+                        <img 
+                        role="presentation" 
+                        className="object-fit w-full rounded h-44 " 
+                        src="/assets/Services/imagem5.png" 
+                        alt="Imagem do serviço realizado" />
+                        
+                        <div className="p-6 space-y-2">
+                            
+                            <h3 className="text-2xl font-orelega">Commercial</h3>
+                            
+                            <p className='font-sen text-xl'>Ideal for property owners and hosts. Set your cleaning needs on autopilot with Hutter Cleaning.</p>
 
                         </div>
                     </a>
 
-                    <a rel="noopener noreferrer" href="#" className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block">
+                    <a 
+                    rel="noopener noreferrer" 
+                    href="#" 
+                    className="max-w-sm mx-auto">
                        
-                        <img role="presentation" className="object-cover w-full rounded h-44 dark:bg-gray-500" src="https://source.unsplash.com/random/480x360?5" />
+                        <img 
+                        role="presentation" 
+                        className="object-cover w-full rounded h-44 " 
+                        src="/assets/Services/imagem4.png" 
+                        alt="Imagem do serviço realizado"/>
                        
                         <div className="p-6 space-y-2">
                             
-                            <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
-                            <span className="text-xs dark:text-gray-600">January 25, 2021</span>
-                            <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
+                            <h3 className="text-2xl font-orelega">Vacation Home</h3>
+                            
+                            <p className='font-sen text-xl'>Recognizing cleanliness as a top priority for travelers, we use a 4-step rental cleaning checklist to ensure a thorough clean, readying your vacation rental for new guests.</p>
 
                         </div>
                     </a>
 
-                    <a rel="noopener noreferrer" href="#" className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block">
+                    <a 
+                    rel="noopener noreferrer" 
+                    href="#" 
+                    className="max-w-sm mx-auto">
                         
-                        <img role="presentation" className="object-cover w-full rounded h-44 
-                        dark:bg-gray-500" src="https://source.unsplash.com/random/480x360?6" />
+                        <img 
+                        role="presentation" 
+                        className="object-cover w-full rounded h-44" 
+                        src="/assets/Services/imagem6.png" 
+                        alt="Imagem do serviço realizado" />
                         
                         <div className="p-6 space-y-2">
                            
-                            <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">In usu laoreet repudiare legendos</h3>
-                            <span className="text-xs dark:text-gray-600">January 26, 2021</span>
-                            <p>Mei ex aliquid eleifend forensibus, quo ad dicta apeirian neglegentur, ex has tantas percipit perfecto. At per tempor albucius perfecto, ei probatus consulatu patrioque mea, ei vocent delicata indoctum pri.</p>
+                            <h3 className="text-2xl font-orelega">Event</h3>
+                            
+                            <p className='font-sen text-xl'>Hosting an event is tiring enough  let us handle the cleanup. We ll make sure your space is spotless for your next party or event.</p>
 
                         </div>
                     </a>
-                </div>
-
-                <div className="flex justify-center">
-                    <button type="button" className="px-6 py-3 text-sm rounded-md hover:underline dark:bg-gray-50 dark:text-gray-600">Load more posts...</button>
                 </div>
             </div>
 

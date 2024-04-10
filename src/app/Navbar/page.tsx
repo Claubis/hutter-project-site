@@ -29,7 +29,7 @@ export default function Navbar() {
   const [activeItem, setActiveItem] = useState('');
 
   return (
-    <div className="bg-white max-w-[1440px]">
+    <div className="bg-white max-w-[1280px]">
       
       <header className="inset-x-0 top-0">
   
@@ -65,7 +65,7 @@ export default function Navbar() {
               href={item.href} 
               onMouseOver={() => setActiveItem(item.name)}
                 onClick={() => setActiveItem(item.name)}
-                className={`text-xl font-sen leading-6 text-gray-500 hover:text-menu-hover navItem ${activeItem === item.name ? 'border-b-2 border-menu-hover' : ''}`}
+                className={`text-xl font-sen leading-6 hover:text-menu-hover navItem ${activeItem === item.name ? 'border-b-2 border-menu-hover' : ''}`}
               >
                 {item.name}
               </a>

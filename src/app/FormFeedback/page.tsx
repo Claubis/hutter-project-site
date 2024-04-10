@@ -112,8 +112,6 @@ export default function FormFeedback(){
                 className="w-[100%] md:w-[80%] mx-auto bg-[#FFFEE6] rounded-lg p-10 grid-cols-* md:mt-20" 
                 >
 
-                    <input type="hidden" name="form-name" value="form-feedback" />
-
                         <div>
                             
                             <label className="block mb-2 text-sm font-medium text-gray-900 ">Name</label>
