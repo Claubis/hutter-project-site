@@ -59,10 +59,12 @@ export default function FormFeedback(){
             <div className="w-[100%] bg-[#FFFFF] p-10">
 
                 <form 
+                action="#"
                 className="w-[100%] md:w-[80%] mx-auto bg-[#FFFEE6] rounded-lg p-10 grid-cols-* md:mt-20" 
                 name='form-feedback' 
                 method='POST'
-                data-netlify="true">
+                data-netlify="true"
+                >
 
                     <div>
                         
@@ -83,7 +85,7 @@ export default function FormFeedback(){
                         <input 
                         name='email' 
                         type="email" 
-                        id="email" 
+                        id="email"
                         aria-describedby="helper-text-explanation" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@gmail.com"/>
 
                     </div>

@@ -30,6 +30,9 @@ const config: Config = {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
+      colors: {
+        'menu-hover': '#A5C3A7',
+      },
       keyframes: {
         scroll: {
           to: {
@@ -41,5 +44,7 @@ const config: Config = {
   },
   plugins: [],
 };
+
+
 
 export default config;

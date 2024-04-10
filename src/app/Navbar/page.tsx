@@ -65,15 +65,13 @@ export default function Navbar() {
               href={item.href} 
               onMouseOver={() => setActiveItem(item.name)}
                 onClick={() => setActiveItem(item.name)}
-                className={`text-xl font-light leading-6 text-gray-900 hover:text-menu-hover navItem ${activeItem === item.name ? 'border-b-2 border-menu-hover' : ''}`}
+                className={`text-xl font-sen leading-6 text-gray-500 hover:text-menu-hover navItem ${activeItem === item.name ? 'border-b-2 border-menu-hover' : ''}`}
               >
                 {item.name}
               </a>
             ))}
           </div>
           
-         
-
         </nav>
         <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <div className="fixed inset-0 z-50" />
