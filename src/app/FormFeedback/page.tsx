@@ -10,11 +10,8 @@ interface FormData {
     message: string;
 }
 
-interface Props {
-    onSubmit: (formData: FormData) => void;
-}
 
-export default function FormFeedback({ onSubmit }: Props){
+export default function FormFeedback(){
 
     const [rating, setRating] = useState(0);
     const [name, setName] = useState('');
