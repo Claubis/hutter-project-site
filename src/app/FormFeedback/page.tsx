@@ -6,11 +6,19 @@ import Image from 'next/image';
 export default function FormFeedback(){
 
     const [rating, setRating] = useState(0);
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: "",
+
+      })
 
     type StarIconProps = {
         filled: boolean;
         onClick: () => void;
     };
+
+
 
     // Função para renderizar o ícone de estrela SVG
     const StarIcon = ({ filled, onClick }: StarIconProps) => (
@@ -31,10 +39,23 @@ export default function FormFeedback(){
         </svg>
       );
     
-      // Função para atualizar a classificação baseada no índice da estrela clicada
-      const handleSetRating = (index:any) => {
-        setRating(index + 1);
-      };
+    // Função para atualizar a classificação baseada no índice da estrela clicada
+    const handleSetRating = (index:any) => {
+    setRating(index + 1);
+    };
+
+      
+    const handleSubmit = async (event:any) => {
+        event.preventDefault();
+    
+
+    };
+      
+    // Esta função lida com a mudança nos inputs do formulário
+    const handleInputChange = (e:any) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
 
     return(
 
@@ -51,7 +72,12 @@ export default function FormFeedback(){
                     <p className="mt-2 text-lg md:text-2xl leading-8 font-sen">We are looking forward to hearing from you.</p>
 
                     <div>
-                        <Image src="/assets/FormFeedback/imagem1.png" alt='Imagem com estrelas' width={500} height={100}></Image>
+                        <Image 
+                        src="/assets/FormFeedback/imagem1.png" 
+                        alt='Imagem com estrelas' 
+                        width={500} 
+                        height={100}
+                        className='w-auto h-auto'></Image>
                     </div>
 
             </div>
@@ -62,9 +88,9 @@ export default function FormFeedback(){
                 action="#"
                 className="w-[100%] md:w-[80%] mx-auto bg-[#FFFEE6] rounded-lg p-10 grid-cols-* md:mt-20" 
                 name="form-feedback"
-                method="post"
+                method="POST"
                 data-netlify="true"
-
+                onSubmit={handleSubmit}
                 >
 
                 <input type="hidden" name="form-name" value="form-feedback" />
@@ -77,7 +103,9 @@ export default function FormFeedback(){
                         id='name'
                         name='name' 
                         type="text"
-                        className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500"/>
+                        className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500"
+                        value={formData.name}
+                        onChange={handleInputChange}/>
                     </div>
 
                     
@@ -89,7 +117,9 @@ export default function FormFeedback(){
                         id="email"
                         name='email' 
                         type="email" 
-                        aria-describedby="helper-text-explanation" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@gmail.com"/>
+                        aria-describedby="helper-text-explanation" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@gmail.com"
+                        value={formData.email}
+                        onChange={handleInputChange}/>
 
                     </div>
 
@@ -99,7 +129,10 @@ export default function FormFeedback(){
                         className='' 
                         type="number" 
                         name="rating" 
-                        value={rating} hidden required />
+                        value={rating} 
+                        hidden 
+                        required
+                        readOnly  />
                         {[...Array(5)].map((_, index) => (
                             <StarIcon key={index} filled={index < rating} onClick={() => handleSetRating(index)} />
                         ))}
@@ -115,6 +148,8 @@ export default function FormFeedback(){
                         name='message' 
                         id="message" 
                         rows={8} 
+                        value={formData.message}
+                        onChange={handleInputChange}
                         className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Leave a comment..."></textarea>
 
                     </div>
@@ -122,7 +157,7 @@ export default function FormFeedback(){
                     <div className='flex justify-center text-center mt-10'>
                     
                     <div className='rounded-md bg-[#A5C3A7] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#D5E0B5] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-[80%] md:w-[60%]'>
-                        <button type='submit' value="form-feedback">Submit</button>
+                        <button type='submit' id="submitBtn" value="form-feedback">Submit</button>
                     </div>
                 </div>
 
