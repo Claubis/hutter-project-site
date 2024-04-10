@@ -8,13 +8,13 @@ export  default function Testimonial(){
 
         <section className="bg-terceira px-3 md:px-10">
             
-            <div className="container px-6 py-12 mx-auto">
+            <div className="container py-12 mx-auto">
                 
                 <div className="grid items-center gap-4 md:flex xl:grid-cols-5 ">
                     
-                    <div className="max-w-2xl mx-auto my-8 space-y-4 xl:col-span-2 xl:text-left">
+                    <div className="max-w-2xl mx-auto my-8 space-y-4 xl:col-span-2 xl:text-left px-5 md:px-0">
                         
-                        <h2 className="text-5xl md:text-6xl font-orelega mb-10">What our customers are saying about us</h2>
+                        <h2 className="text-5xl md:text-6xl font-orelega mb-10 text-white">What our customers are saying about us</h2>
                         
                         <p className="text-sen text-xl">We encourage you to explore our customers' opinions in the feedback posts, where you can see how their valuable insights help us to continuously evolve and improve.</p>
 
@@ -23,10 +23,12 @@ export  default function Testimonial(){
                         </p>
 
                         <div className="flex justify-center">
+                            
                             <Link 
                             href={"/FormFeedback"}
                             className="px-8 py-3 text-xl font-sen border rounded bg-white">Share your feedback
                             </Link>
+                            
                         </div>
 
                     </div>

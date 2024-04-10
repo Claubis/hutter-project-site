@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
 
@@ -206,8 +207,11 @@ export default function About() {
 
             <div className='flex justify-center pb-20'>
                 
-                <button type="button" className="px-8 text-xl py-3 font-sen rounded bg-white text-black shadow-md hover:bg-[#FFFFFF] transition duration-150 ease-in-out ">Request a Quote Free
-                </button>
+                <Link 
+                href="/FormQuote" 
+                type="button" 
+                className="px-8 text-xl py-3 font-sen rounded bg-white text-black shadow-md hover:bg-[#FFFFFF] transition duration-150 ease-in-out ">Request a Quote Free
+                </Link>
 
             </div>
 
