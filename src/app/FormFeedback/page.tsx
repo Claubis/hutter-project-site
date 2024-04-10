@@ -103,8 +103,10 @@ export default function FormFeedback(){
             <div className="w-[100%] bg-[#FFFFF] p-10">
 
                 <form
+                action="post"
+                id='form-feedback'
                 name="form-feedback-new-version"
-                method="POST"
+                method="post"
                 data-netlify="true"
                 onSubmit={handleFeedbackFormSubmit}
                 className="w-[100%] md:w-[80%] mx-auto bg-[#FFFEE6] rounded-lg p-10 grid-cols-* md:mt-20" 
@@ -173,7 +175,7 @@ export default function FormFeedback(){
 
                         <div className='flex justify-center text-center mt-10'>
                         
-                        <div>
+                        <div data-netlify-recaptcha="true">
                             <button
                             className='rounded-md bg-[#A5C3A7] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#D5E0B5] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-[100%] md:w-[100%]' 
                             type='submit' 
