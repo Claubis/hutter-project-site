@@ -36,9 +36,6 @@ export default function FormFeedback(){
         // Mostrar no console minhas informações
         console.log('Dados do formulário:', { name,email, rating, message  });
 
-        // Exibe um alerta personalizado após o envio do formulário
-        alert(name + ' seu feedback foi recebido com sucesso!\n '+ '\nDados ' + email + '\nNota: ' + rating + '\nDescrição: ' + message );
-
         // Limpar o formulário após o envio
         setName('');
         setEmail('');
@@ -105,87 +102,84 @@ export default function FormFeedback(){
 
             <div className="w-[100%] bg-[#FFFFF] p-10">
 
-                <form 
-                action="#"
-                className="w-[100%] md:w-[80%] mx-auto bg-[#FFFEE6] rounded-lg p-10 grid-cols-* md:mt-20" 
-                name="form-feedback"
+                <form
+                name="form-feedback-new-version"
                 method="POST"
                 data-netlify="true"
                 onSubmit={handleFeedbackFormSubmit}
+                className="w-[100%] md:w-[80%] mx-auto bg-[#FFFEE6] rounded-lg p-10 grid-cols-* md:mt-20" 
                 >
 
-                <input type="hidden" name="form-name" value="form-feedback" />
+                    <input type="hidden" name="form-name" value="form-feedback" />
 
-                    <div>
+                        <div>
+                            
+                            <label className="block mb-2 text-sm font-medium text-gray-900 ">Name</label>
+                            
+                            <input 
+                            id='name'
+                            name='name' 
+                            type="text"
+                            value={name} onChange={handleName}
+                            className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500"
+                            />
+                        </div>
+
                         
-                        <label className="block mb-2 text-sm font-medium text-gray-900 ">Name</label>
+                        <div className="mx-auto mt-10"> 
+
+                            <label className="block mb-2 text-sm font-medium text-gray-900">Your email</label>
+
+                            <input 
+                            id="email"
+                            name='email' 
+                            type="email" 
+                            value={email} onChange={handleEmail}
+                            aria-describedby="helper-text-explanation" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@gmail.com"
+                            />
+
+                        </div>
+
+                        <div className="rating flex justify-center content-center mt-10 ">
+                            
+                            <input 
+                            className='' 
+                            type="number" 
+                            name="rating" 
+                            value={rating} 
+                            hidden 
+                            required
+                            readOnly  />
+                            {[...Array(5)].map((_, index) => (
+                                <StarIcon key={index} filled={index < rating} onClick={() => handleSetRating(index)} />
+                            ))}
+
+                        </div>
+
                         
-                        <input 
-                        id='name'
-                        name='name' 
-                        type="text"
-                        value={name} onChange={handleName}
-                        className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500"
-                        />
-                    </div>
+                        <div className="mx-auto mt-20">
 
-                    
-                    <div className="mx-auto mt-10"> 
+                            <label className="block mb-2 text-sm font-medium text-gray-900">Your message</label>
 
-                        <label className="block mb-2 text-sm font-medium text-gray-900">Your email</label>
+                            <textarea 
+                            name='message' 
+                            id="message" 
+                            rows={8} 
+                            value={message} onChange={handleMessage}
+                            className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" 
+                            placeholder="Leave a comment..."></textarea>
 
-                        <input 
-                        id="email"
-                        name='email' 
-                        type="email" 
-                        value={email} onChange={handleEmail}
-                        aria-describedby="helper-text-explanation" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@gmail.com"
-                        />
+                        </div>
 
-                    </div>
-
-                    <div className="rating flex justify-center content-center mt-10 ">
+                        <div className='flex justify-center text-center mt-10'>
                         
-                        <input 
-                        className='' 
-                        type="number" 
-                        name="rating" 
-                        value={rating} 
-                        hidden 
-                        required
-                        readOnly  />
-                        {[...Array(5)].map((_, index) => (
-                            <StarIcon key={index} filled={index < rating} onClick={() => handleSetRating(index)} />
-                        ))}
-
+                        <div>
+                            <button
+                            className='rounded-md bg-[#A5C3A7] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#D5E0B5] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-[100%] md:w-[100%]' 
+                            type='submit' 
+                            id="submitBtn">Submit</button>
+                        </div>
                     </div>
-
-                    
-                    <div className="mx-auto mt-20">
-
-                        <label className="block mb-2 text-sm font-medium text-gray-900">Your message</label>
-
-                        <textarea 
-                        name='message' 
-                        id="message" 
-                        rows={8} 
-                        value={message} onChange={handleMessage}
-                        className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" 
-                        placeholder="Leave a comment..."></textarea>
-
-                    </div>
-
-                    <div className='flex justify-center text-center mt-10'>
-                    
-                    <div>
-                        <button
-                        className='rounded-md bg-[#A5C3A7] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#D5E0B5] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-[100%] md:w-[100%]' 
-                        type='submit' 
-                        id="submitBtn" 
-                        value="form-feedback">Submit</button>
-                    </div>
-                </div>
-
 
                 </form>
 
