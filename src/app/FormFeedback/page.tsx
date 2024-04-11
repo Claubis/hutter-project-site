@@ -115,28 +115,32 @@ export default function FormFeedback(){
 
                         <div>
                             
-                            <label className="block mb-2 text-xl font-sen text-white ">Name</label>
+                            <label className="block mb-2 text-xl font-sen text-white" htmlFor='name'>Name</label>
                             
                             <input 
                             id='name'
                             name='name' 
                             type="text"
-                            value={name} onChange={handleName}
+                            value={name} 
+                            onChange={handleName}
                             className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500"
+                            autoComplete='name'
                             />
                         </div>
 
                         
                         <div className="mx-auto mt-10"> 
 
-                            <label className="block mb-2 text-xl font-sen text-white">Your email</label>
+                            <label className="block mb-2 text-xl font-sen text-white" htmlFor='email'>Your email</label>
 
                             <input 
                             id="email"
                             name='email' 
                             type="email" 
-                            value={email} onChange={handleEmail}
+                            value={email} 
+                            onChange={handleEmail}
                             aria-describedby="helper-text-explanation" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@gmail.com"
+                            autoComplete='email'
                             />
 
                         </div>
@@ -160,7 +164,7 @@ export default function FormFeedback(){
                         
                         <div className="mx-auto mt-20">
 
-                            <label className="block mb-2 text-xl font-sen text-white">Your message</label>
+                            <label className="block mb-2 text-xl font-sen text-white" htmlFor='message'>Your message</label>
 
                             <textarea 
                             name='message' 

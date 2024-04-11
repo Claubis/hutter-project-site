@@ -46,16 +46,21 @@ export  default function Testimonial(){
 
                                     <div className="flex">
                                         <div className="rating">
+                                            
                                             <input value="5" name="rate" id="star5" type="radio"/>
-                                            <label title="text"></label>
+                                            <label htmlFor="star5" title="text"></label>
+
                                             <input value="4" name="rate" id="star4" type="radio"/>
-                                            <label title="text"></label>
+                                            <label htmlFor="star4" title="text"></label>
+
                                             <input value="3" name="rate" id="star3" type="radio" />
-                                            <label title="text"></label>
+                                            <label htmlFor="star3" title="text"></label>
+
                                             <input value="2" name="rate" id="star2" type="radio"/>
-                                            <label title="text"></label>
+                                            <label htmlFor="star2" title="text"></label>
+
                                             <input value="1" name="rate" id="star1" type="radio"/>
-                                            <label title="text"></label>
+                                            <label htmlFor="star1" title="text"></label>
     
                                         </div>
                                     </div>
@@ -83,16 +88,21 @@ export  default function Testimonial(){
 
                                 <div className="flex">
                                         <div className="rating">
-                                            <input value="5" name="rate" id="star5" type="radio"/>
-                                            <label title="text"></label>
-                                            <input value="4" name="rate" id="star4" type="radio"/>
-                                            <label title="text"></label>
-                                            <input value="3" name="rate" id="star3" type="radio" />
-                                            <label title="text"></label>
-                                            <input value="2" name="rate" id="star2" type="radio"/>
-                                            <label title="text"></label>
-                                            <input value="1" name="rate" id="star1" type="radio"/>
-                                            <label title="text"></label>
+                                            
+                                            <input value="10" name="rate" id="star10" type="radio"/>
+                                            <label htmlFor="star10" title="text"></label>
+
+                                            <input value="9" name="rate" id="star9" type="radio"/>
+                                            <label htmlFor="star9" title="text"></label>
+
+                                            <input value="8" name="rate" id="star8" type="radio" />
+                                            <label htmlFor="star8" title="text"></label>
+
+                                            <input value="7" name="rate" id="star7" type="radio"/>
+                                            <label htmlFor="star7" title="text"></label>
+
+                                            <input value="6" name="rate" id="star6" type="radio"/>
+                                            <label htmlFor="star6" title="text"></label>
     
                                         </div>
                                     </div>
@@ -123,14 +133,18 @@ export  default function Testimonial(){
 
                                 <div className="flex">
                                         <div className="rating">
-                                            <input value="5" name="rate" id="star5" type="radio"/>
-                                            <label title="text"></label>
-                                            <input value="4" name="rate" id="star4" type="radio"/>
-                                            <label title="text"></label>
-                                            <input value="3" name="rate" id="star3" type="radio" />
-                                            <label title="text"></label>
-                                            <input value="2" name="rate" id="star2" type="radio"/>
-                                            <label title="text"></label>
+                                            
+                                            <input value="14" name="rate" id="star14" type="radio"/>
+                                            <label htmlFor="star14" title="text"></label>
+
+                                            <input value="13" name="rate" id="star13" type="radio"/>
+                                            <label htmlFor="star13" title="text"></label>
+
+                                            <input value="12" name="rate" id="star12" type="radio" />
+                                            <label htmlFor="star12" title="text"></label>
+
+                                            <input value="11" name="rate" id="star11" type="radio"/>
+                                            <label htmlFor="star11" title="text"></label>
     
                                         </div>
                                     </div>
@@ -158,16 +172,21 @@ export  default function Testimonial(){
 
                                 <div className="flex">
                                         <div className="rating">
-                                            <input value="5" name="rate" id="star5" type="radio"/>
-                                            <label title="text"></label>
-                                            <input value="4" name="rate" id="star4" type="radio"/>
-                                            <label title="text"></label>
-                                            <input value="3" name="rate" id="star3" type="radio" />
-                                            <label title="text"></label>
-                                            <input value="2" name="rate" id="star2" type="radio"/>
-                                            <label title="text"></label>
-                                            <input value="1" name="rate" id="star1" type="radio"/>
-                                            <label title="text"></label>
+                                            
+                                            <input value="19" name="rate" id="star19" type="radio"/>
+                                            <label htmlFor="star19" title="text"></label>
+
+                                            <input value="18" name="rate" id="star18" type="radio"/>
+                                            <label htmlFor="star18" title="text"></label>
+
+                                            <input value="17" name="rate" id="star17" type="radio" />
+                                            <label htmlFor="star17" title="text"></label>
+
+                                            <input value="16" name="rate" id="star16" type="radio"/>
+                                            <label htmlFor="star16" title="text"></label>
+
+                                            <input value="15" name="rate" id="star15" type="radio"/>
+                                            <label htmlFor="star15" title="text"></label>
     
                                         </div>
                                     </div>

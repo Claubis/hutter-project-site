@@ -8,7 +8,7 @@ export default function HomePage() {
 
     return (
 
-        <section className="max-w-[1280px] h-[50rem] md:h-full bg-quinta">
+        <section className="max-w-[1440px] h-[50rem] md:h-full bg-quinta">
 
             <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
                 
@@ -20,14 +20,15 @@ export default function HomePage() {
                             </h1>
                         </div>
 
-                        <div>
+                        <div className="flex justify-center">
 
                             <Image 
                                 src="/assets/HomePage/logo-removebg-preview.png" 
                                 alt="Logo da empresa" 
-                                className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 md:hidden w-full h-full"
+                                className="object-contain  md:hidden w-auto"
                                 width={500}
-                                height={500} />
+                                height={100}
+                                priority />
 
                         </div>
 
@@ -59,7 +60,8 @@ export default function HomePage() {
                     alt="Logo da empresa" 
                     className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 hidden md:flex w-auto h-auto"
                     width={500}
-                    height={500} />
+                    height={500}
+                    priority  />
 
                 </div>
 

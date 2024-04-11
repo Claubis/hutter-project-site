@@ -20,7 +20,7 @@ const navigation = [
   { name: 'Services', href: '/Services' },
   { name: 'Quote', href: '/FormQuote' },
   { name: 'Feedback', href: '/FormFeedback' },
-  { name: 'Contact', href: '#' },
+  { name: 'Contact', href: 'Contact' },
 ]
 
 export default function Navbar() {
@@ -29,7 +29,7 @@ export default function Navbar() {
   const [activeItem, setActiveItem] = useState('');
 
   return (
-    <div className="bg-white max-w-[1280px]">
+    <div className="bg-white max-w-[1440px]">
       
       <header className="inset-x-0 top-0">
   

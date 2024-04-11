@@ -37,15 +37,28 @@ export default function Contact(){
                                 
                                 <label htmlFor="name" className="text-sm sr-only">Your name</label>
                                 
-                                <input id="name" type="text" placeholder="Your name" className="w-full rounded-md p-5" />
+                                <input 
+                                name="name"
+                                id="name" 
+                                type="text" 
+                                placeholder="Your name" 
+                                className="w-full rounded-md p-5"
+                                autoComplete="name" />
 
                             </div>
 
                             <div className="bg-white rounded-md">
                                 
-                                <label htmlFor="lastname" className="text-sm sr-only">Phone number</label>
+                                <label htmlFor="phone" className="text-sm sr-only">Phone number</label>
                                 
-                                <input id="phone" type="number" placeholder="Phone number" className="w-full rounded-md focus:ring p-5" />
+                                <input 
+                                name="phone"
+                                id="phone" 
+                                type="number" 
+                                placeholder="Phone 
+                                number" 
+                                className="w-full rounded-md focus:ring p-5"
+                                autoComplete="phone" />
 
                             </div>
 
@@ -64,9 +77,10 @@ export default function Contact(){
                     <Image 
                     src="/assets/Contact/Imagem3.png" 
                     alt="Imagem sobre contato" 
-                    className="object-cover rounded-md"
+                    className="object-cover rounded-md w-auto h-auto"
                     width={300}
-                    height={0} />
+                    height={0}
+                    priority  />
 
                 </div>
 

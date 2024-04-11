@@ -98,9 +98,10 @@ export default function About() {
                         
                         <Image 
                         src="/assets/About/imagem1.png" 
-                        alt="Imagem sobre limpeza regular com um casal na foto" className="mx-auto rounded-lg shadow-lg"
+                        alt="Imagem sobre limpeza regular com um casal na foto" className="mx-auto rounded-lg shadow-lg w-auto h-auto"
                         width={500}
-                        height={500} />
+                        height={500}
+                        priority  />
 
                     </div>
 
@@ -196,9 +197,10 @@ export default function About() {
                             
                             <Image
                             src="/assets/About/imagem2.png" 
-                            alt="Imagem sobre casal fazendo um serviço de mudança" className="mx-auto rounded-lg shadow-lg"
+                            alt="Imagem sobre casal fazendo um serviço de mudança" className="mx-auto rounded-lg shadow-lg w-auto h-auto"
                             width={500}
-                            height={500} />
+                            height={500}
+                            priority  />
 
                         </div>
                     </div>

@@ -93,8 +93,6 @@ export default function FormQuote() {
     netlify-honeypot="bot-field"
     onSubmit={handleSubmit} 
     className='bg-primeira grid md:flex px-10 justify-center items-center min-h-[640px]'>
-
-    <input type="hidden" name="form-quote" value="quote"/>
         
         <input type="hidden" name="form-name" value="form-quote" />
         <input type="hidden" name="firstName" value={formData.firstName} />
@@ -167,7 +165,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({ onChange }) => {
                     
                         <div className="sm:col-span-3">
 
-                            <label htmlFor="first-name" className="block text-sm font-sen leading-6 text-gray-900">
+                            <label htmlFor="firstName" className="block text-sm font-sen leading-6 text-gray-900">
                                 Full name
                             </label>
 
@@ -177,7 +175,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({ onChange }) => {
                                 type="text"
                                 name="firstName"
                                 id="firstName"
-                                autoComplete="firstName"
+                                autoComplete="name"
                                 className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                                 onChange={(e) => onChange(e.target.name, e.target.value)}
                                 />
@@ -187,7 +185,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({ onChange }) => {
 
                         <div className="sm:col-span-3">
 
-                            <label htmlFor="last-name" className="block text-sm font-sen leading-6 text-gray-900">
+                            <label htmlFor="phone" className="block text-sm font-sen leading-6 text-gray-900">
                                 Phone number
                             </label>
 
