@@ -1,10 +1,43 @@
-
+'use client'
 import Link from "next/link";
 import Image from "next/image";
-
-import imagem from '../../../public/assets/Contact/Imagem1.png'
+import { useState } from "react";
 
 export default function Contact(){
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    const encode = (data:any) => {
+        return Object.keys(data)
+          .map(
+            (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+          )
+          .join('&');
+      };
+    
+    const handleSubmit = (e:any) => {
+    const data = {name, email, message};
+
+    fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({ 'form-name': 'contact-form', ...data }),
+    })
+        .then(() => alert('Success!'))
+        .catch((error) => alert(error));
+
+    e.preventDefault();
+    };
+
+    // Função atualizada para lidar com mudanças nos campos do formulário
+    const handleChange = (e: any) => {
+        const { name, value } = e.target;
+        if (name === 'name') setName(value);
+        if (name === 'email') setEmail(value);
+        if (name === 'message') setMessage(value);
+  };
 
     return(
 
@@ -29,7 +62,8 @@ export default function Contact(){
                         method="POST"
                         data-netlify="true"
                         netlify-honeypot="bot-field"
-                        className="self-stretch space-y-3">
+                        className="self-stretch space-y-3"
+                        onSubmit={handleSubmit}>
 
                         <input type="hidden" name="form-contact" value="contact"/>
                             
