@@ -6,7 +6,7 @@ export default function HomePage() {
 
     return (
 
-        <section className="max-w-[1280px]">
+        <section className="max-w-[1280px] h-[50rem] md:h-full">
 
             <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
                 
