@@ -1,6 +1,11 @@
 
 import Link from "next/link";
 
+/* Instalar npm install @fortawesome/fontawesome-free
+ */
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
 export default function Footer(){
 
     return(
@@ -44,13 +49,18 @@ export default function Footer(){
                     
                     <h2 className="font-orelega text-3xl md:text-xl lg:text-2xl">Contact</h2>
                     
-                    <div className="flex flex-col space-y-2 text-xl font-sen">
+                    <div className="flex flex-col space-y-2 text-xl font-sen gap-5">
                         
-                        <a rel="noopener noreferrer" href="#">Call</a>
-                        <a rel="noopener noreferrer" href="#">Message</a>
-                        <a rel="noopener noreferrer" href="#">E-mail</a>
+                        <a className="flex justify-start md:justify-center font-sen text-sm" rel="noopener noreferrer" href="tel:+4259849284"><i className="fa-solid fa-phone">(425) 984.9284</i></a>
+
+                        <a className="flex justify-start md:justify-center font-sen text-sm" rel="noopener noreferrer" href="sms:+4259849284"><i className="fa-solid fa-sms">(425) 984.9284</i></a>
+
+                        <a className="flex justify-start md:justify-center font-sen text-[10px]" rel="noopener noreferrer" href="mailto:huttercleaning@gmail.com"><i className="fa-solid fa-envelope">huttercleaning@gmail.com</i></a>
+
+                        <a className="flex justify-start md:justify-center font-sen text-sm" rel="noopener noreferrer" href="https://wa.me/4259849284"><i className="fa-brands fa-whatsapp">(425) 984.9284</i></a>
 
                     </div>
+
                 </div>
 
                 <div className="flex flex-col space-y-4">
@@ -59,8 +69,8 @@ export default function Footer(){
                     
                     <div className="flex flex-col space-y-2 text-xl font-sen">
                         
-                        <a rel="noopener noreferrer" href="#">Instagram</a>
-                        <a rel="noopener noreferrer" href="#">Facebook</a>
+                        <a rel="noopener noreferrer" href="https://www.instagram.com/huttercleaning?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA==" target="_blank">Instagram</a>
+                        <a rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=100095415333262&mibextid=LQQJ4d" target="_blank">Facebook</a>
 
                     </div>
                 </div>
