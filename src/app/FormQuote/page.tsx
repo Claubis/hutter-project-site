@@ -93,6 +93,8 @@ export default function FormQuote() {
     netlify-honeypot="bot-field"
     onSubmit={handleSubmit} 
     className='bg-primeira grid md:flex px-10 justify-center items-center min-h-[640px]'>
+
+    <input type="hidden" name="form-quote" value="quote"/>
         
         <input type="hidden" name="form-name" value="form-quote" />
         <input type="hidden" name="firstName" value={formData.firstName} />

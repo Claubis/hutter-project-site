@@ -110,6 +110,8 @@ export default function FormFeedback(){
                 onSubmit={handleFeedbackFormSubmit}
                 className="w-[100%] md:w-[80%] mx-auto bg-primeira rounded-lg p-10 grid-cols-* md:mt-20"
                 >
+                <input type="hidden" name="form-feedback" value="feedback"/>
+
 
                         <div>
                             

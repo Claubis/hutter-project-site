@@ -25,7 +25,7 @@ export default function HomePage() {
                             <Image 
                                 src="/assets/HomePage/logo-removebg-preview.png" 
                                 alt="Logo da empresa" 
-                                className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 md:hidden"
+                                className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 md:hidden w-full h-full"
                                 width={500}
                                 height={500} />
 
@@ -57,7 +57,7 @@ export default function HomePage() {
                     <Image 
                     src="/assets/HomePage/logo-removebg-preview.png" 
                     alt="Logo da empresa" 
-                    className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 hidden md:flex"
+                    className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 hidden md:flex w-auto h-auto"
                     width={500}
                     height={500} />
 

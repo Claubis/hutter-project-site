@@ -25,11 +25,13 @@ export default function Contact(){
                     <div>
 
                         <form 
-                        action="post"
                         name="form-contact"
+                        method="POST"
                         data-netlify="true"
                         netlify-honeypot="bot-field"
                         className="self-stretch space-y-3">
+
+                        <input type="hidden" name="form-contact" value="contact"/>
                             
                             <div className="bg-white rounded-md">
                                 
