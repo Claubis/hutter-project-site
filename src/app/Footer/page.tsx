@@ -7,27 +7,28 @@ export default function Footer(){
 
         <footer className="p-10 bg-quarta">
             
-            <div className="container grid grid-cols-2 mx-auto gap-x-3 gap-y-8 sm:grid-cols-3 md:grid-cols-4">
+            <div className="flex flex-col gap-10 md:grid md:grid-cols-4 justify-center md:text-center">
                 
                 <div className="flex flex-col space-y-4">
                     
-                    <h2 className="font-orelega text-lg">About our company</h2>
+                    <h2 className="font-orelega text-3xl md:text-xl lg:text-2xl">About our company</h2>
                     
-                    <div className="flex flex-col space-y-2 text-sm">
+                    <div className="flex flex-col space-y-2 text-xl font-sen">
                         
                         <Link rel="noopener noreferrer" href="/About">About</Link>
                         <Link rel="noopener noreferrer" href="/FormQuote">Request a quote</Link>
-                        <Link rel="noopener noreferrer" href="#">Região de atendimento</Link>
-                        <Link rel="noopener noreferrer" href="/Service">Serviços</Link>
-                        <Link rel="noopener noreferrer" href="#">Horário de atendimento</Link>
+                        <Link rel="noopener noreferrer" href="#">Service area</Link>
+                        <Link rel="noopener noreferrer" href="/Service">Services</Link>
+                        <Link rel="noopener noreferrer" href="#">Business hours</Link>
 
                     </div>
                 </div>
+
                 <div className="flex flex-col space-y-4">
                     
-                    <h2 className="font-orelega text-lg">Services</h2>
+                    <h2 className="font-orelega text-3xl md:text-xl lg:text-2xl">Services</h2>
                     
-                    <div className="flex flex-col space-y-2 text-sm">
+                    <div className="flex flex-col space-y-2 text-xl font-sen">
                         
                         <p>Regular cleaning</p>
                         <p>Deep Cleaning</p>
@@ -41,9 +42,9 @@ export default function Footer(){
 
                 <div className="flex flex-col space-y-4">
                     
-                    <h2 className="font-orelega text-lg">Contact</h2>
+                    <h2 className="font-orelega text-3xl md:text-xl lg:text-2xl">Contact</h2>
                     
-                    <div className="flex flex-col space-y-2 text-sm">
+                    <div className="flex flex-col space-y-2 text-xl font-sen">
                         
                         <a rel="noopener noreferrer" href="#">Call</a>
                         <a rel="noopener noreferrer" href="#">Message</a>
@@ -54,9 +55,9 @@ export default function Footer(){
 
                 <div className="flex flex-col space-y-4">
                     
-                    <h2 className="font-medium text-lg">Social Media</h2>
+                    <h2 className="font-orelega text-3xl md:text-xl lg:text-2xl">Social Media</h2>
                     
-                    <div className="flex flex-col space-y-2 text-sm dark:text-gray-600">
+                    <div className="flex flex-col space-y-2 text-xl font-sen">
                         
                         <a rel="noopener noreferrer" href="#">Instagram</a>
                         <a rel="noopener noreferrer" href="#">Facebook</a>
@@ -65,7 +66,7 @@ export default function Footer(){
                 </div>
             </div>
 
-            <div className="flex items-center justify-center px-6 pt-12 text-sm">
+            <div className="flex items-center justify-center px-6 pt-12 text-sm font-sen">
                 
                 <span className="text-center">© Copyright 2024. Hutter Cleaning All Rights Reserved.</span>
 

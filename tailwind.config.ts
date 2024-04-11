@@ -20,18 +20,18 @@ const config: Config = {
       },
       backgroundColor: {
         primeira: "#47667B",
-        segunda: "#6D8B89",
-        terceira: "#A5C3A7",
-        quarta: "#D5E0B5",
-        quinta: "#F8F4C4",
-        sexta: "#FFFFFF",
+        segunda: "#B0BEC5",
+        terceira: "#CCCCCC",
+        quarta: "#E0E0E0",
+        quinta: "#F5F5F5",
+        sexta: "#586368",
       },
       animation: {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       colors: {
-        'menu-hover': '#A5C3A7',
+        'menu-hover': '#47667B',
       },
       keyframes: {
         scroll: {

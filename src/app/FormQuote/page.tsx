@@ -7,9 +7,6 @@ import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 npm install @heroicons/react
 */
 
-/* Importação da imagem */
-import imagem from '../../../public/assets/Form/imagem-removebg-preview.png';
-
 import React, { useState, useRef } from 'react';
 
 type FormDataChangeHandler = (name: string, value: string) => void;
@@ -93,8 +90,9 @@ export default function FormQuote() {
     name='form-quote' 
     method='post' 
     data-netlify="true" 
+    netlify-honeypot="bot-field"
     onSubmit={handleSubmit} 
-    className='bg-primeira grid md:flex px-10 justify-center items-center min-h-[840px]'>
+    className='bg-primeira grid md:flex px-10 justify-center items-center min-h-[640px]'>
         
         <input type="hidden" name="form-name" value="form-quote" />
         <input type="hidden" name="firstName" value={formData.firstName} />
@@ -111,7 +109,7 @@ export default function FormQuote() {
         <input type="hidden" name="hour" value={formData.hour} />
         <input type="hidden" name="message" value={formData.message} />
         
-        <div className="bg-white rounded-xl h-[600px] md:h-[550px] w-[100%] md:w-[50%] p-10 order-2 md:order-1 mb-20 md:mb-0">
+        <div className="bg-white rounded-xl h-[580px] md:h-[550px] w-[100%] md:w-[50%] p-10 order-2 md:order-1 mb-20 md:mb-0">
         
         {renderStep()}
             <div className="flex justify-between">
@@ -121,12 +119,12 @@ export default function FormQuote() {
                 </button>
             )}
             {currentStep < 4 && (
-                <button type="button" onClick={nextStep} className="mt-4 bg-[#064E8B] hover:bg-[#B3CEE5] text-white py-2 px-4 rounded">
+                <button type="button" onClick={nextStep} className="mt-4 bg-primeira hover:bg-[#B3CEE5] text-white py-2 px-4 rounded">
                 Next
                 </button>
             )}
             {currentStep === 4 && (
-                <button className="mt-4 bg-green-500 hover:bg-green-700 text-white py-2 px-4 rounded" type='submit'>
+                <button className="mt-4 bg-primeira hover:bg-green-700 text-white py-2 px-4 rounded" type='submit'>
                 Send
                 </button>
             )}
@@ -161,13 +159,13 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({ onChange }) => {
   return (
     <div className="mb-5">
                     
-                    <h2 className="text- font-semibold leading-7 text-gray-900 uppercase text-blue-900">Personal information</h2>
+                    <h2 className="text- font-orelega leading-7 text-gray-900 uppercase text-blue-900">Personal information</h2>
 
                     <div className="mt-5 flex gap-x-1 gap-y-6  flex-col">
                     
                         <div className="sm:col-span-3">
 
-                            <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-gray-900">
+                            <label htmlFor="first-name" className="block text-sm font-sen leading-6 text-gray-900">
                                 Full name
                             </label>
 
@@ -187,7 +185,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({ onChange }) => {
 
                         <div className="sm:col-span-3">
 
-                            <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-gray-900">
+                            <label htmlFor="last-name" className="block text-sm font-sen leading-6 text-gray-900">
                                 Phone number
                             </label>
 
@@ -206,7 +204,7 @@ const PersonalInfo: React.FC<PersonalInfoProps> = ({ onChange }) => {
 
                         <div className="sm:col-span-4">
 
-                            <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+                            <label htmlFor="email" className="block text-sm font-sen leading-6 text-gray-900">
                                 Email address
                             </label>
                             <div className="mt-2">
@@ -238,13 +236,13 @@ const ResidenceInfo: React.FC<ResidenceInfoProps> = ({ onChange }) => {
                     
     <div className="w-full">
 
-        <h2 className="text-lg font-semibold leading-7 text-gray-900 text-blue-900 mt-10 uppercase">Home information</h2>
+        <h2 className="text-lg font-orelega leading-7 text-gray-900 text-blue-900 mt-10 uppercase">Home information</h2>
         
         <div className="mt-5 flex-col md:block md:grid-cols-1 md:gap-x-6 md:gap-y-5 ">
             
             <div className="col-span-full">
                 
-                <label htmlFor="street-address" className="block text-sm font-medium leading-2 text-gray-900">
+                <label htmlFor="street-address" className="block text-sm font-sen leading-2 text-gray-900">
                     Street address
                 </label>
 
@@ -264,7 +262,7 @@ const ResidenceInfo: React.FC<ResidenceInfoProps> = ({ onChange }) => {
 
             <div className="sm:col-span-2 sm:col-start-1">
                 
-                <label htmlFor="city" className="block text-sm font-medium leading-6 text-gray-900">
+                <label htmlFor="city" className="block text-sm font-sen leading-6 text-gray-900">
                     City
                 </label>
 
@@ -284,7 +282,7 @@ const ResidenceInfo: React.FC<ResidenceInfoProps> = ({ onChange }) => {
 
             <div className="sm:col-span-2">
             
-                <label htmlFor="region" className="block text-sm font-medium leading-6 text-gray-900">
+                <label htmlFor="region" className="block text-sm font-sen leading-6 text-gray-900">
                     State / Province
                 </label>
 
@@ -304,7 +302,7 @@ const ResidenceInfo: React.FC<ResidenceInfoProps> = ({ onChange }) => {
 
             <div className="sm:col-span-2">
 
-                <label htmlFor="postal-code" className="block text-sm font-medium leading-6 text-gray-900">
+                <label htmlFor="postal-code" className="block text-sm font-sen leading-6 text-gray-900">
                     ZIP / Postal code
                 </label>
 
@@ -336,13 +334,13 @@ const AdditionalInfo: React.FC<AdditionalInfoProps> = ({ onChange }) => {
   return (
     <div className="w-full">
 
-        <h2 className="text-lg font-semibold leading-7 text-gray-900 uppercase text-blue-900 mt-10">Additional information</h2>
+        <h2 className="text-lg font-orelega leading-7 text-gray-900 uppercase text-blue-900 mt-10">Additional information</h2>
                     
         <div className="mt-5 grid grid-cols-1 gap-x-6 gap-y-5 sm:flex-col">
 
             <div className='sm:col-span-3'>
                 
-                <label htmlFor="rooms" className="block text-sm font-medium leading-6 text-gray-900">
+                <label htmlFor="rooms" className="block text-sm font-sen leading-6 text-gray-900">
                 How many rooms?
                 </label>
                 
@@ -358,6 +356,7 @@ const AdditionalInfo: React.FC<AdditionalInfoProps> = ({ onChange }) => {
                         <option>Select an option</option>
                         <option>1</option>
                         <option>2</option>
+                        <option>3</option>
                         <option>4</option>
                         <option>5</option>
                         <option>6</option>
@@ -365,7 +364,7 @@ const AdditionalInfo: React.FC<AdditionalInfoProps> = ({ onChange }) => {
                         <option>8</option>
                         <option>9</option>
                         <option>10</option>
-                        <option>Mais</option>
+                        <option>More</option>
                         </select>
                 </div>
 
@@ -373,7 +372,7 @@ const AdditionalInfo: React.FC<AdditionalInfoProps> = ({ onChange }) => {
 
             <div className='sm:col-span-3'>
                     
-                <label htmlFor="pets" className="block text-sm font-medium leading-6 text-gray-900">
+                <label htmlFor="pets" className="block text-sm font-sen leading-6 text-gray-900">
                 Do you have pets?
                 </label>
                 
@@ -397,7 +396,7 @@ const AdditionalInfo: React.FC<AdditionalInfoProps> = ({ onChange }) => {
 
             <div className='sm:col-span-3'>
                     
-                <label htmlFor="frequency" className="block text-sm font-medium leading-6 text-gray-900">
+                <label htmlFor="frequency" className="block text-sm font-sen leading-6 text-gray-900">
                 What is the frequency?
                 </label>
                 
@@ -437,13 +436,13 @@ const Schedule: React.FC<ScheduleProps> = ({ onChange }) => {
 
     <div className="w-full">
                     
-        <h2 className="text-lg font-semibold leading-7 text-gray-900 uppercase text-blue-900 mt-10">Appointment</h2>
+        <h2 className="text-lg font-orelega leading-7 text-gray-900 uppercase text-blue-900 mt-10">Appointment</h2>
 
         <div className="mt-5 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-6">
             
             <div className='sm:col-span-3'>
                 
-                <label htmlFor="date" className="block text-sm font-medium leading-6 text-gray-900">
+                <label htmlFor="date" className="block text-sm font-sen leading-6 text-gray-900">
                     Date
                 </label>
                 
@@ -453,7 +452,7 @@ const Schedule: React.FC<ScheduleProps> = ({ onChange }) => {
                         id="date"
                         name="date"
                         autoComplete="date"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6 p-5"
                         onChange={(e) => onChange(e.target.name, e.target.value)}
                         ></input>
                 </div>
@@ -462,7 +461,7 @@ const Schedule: React.FC<ScheduleProps> = ({ onChange }) => {
 
             <div className='sm:col-span-3'>
                 
-                <label htmlFor="hour" className="block text-sm font-medium leading-6 text-gray-900">
+                <label htmlFor="hour" className="block text-sm font-sen leading-6 text-gray-900">
                     Hour
                 </label>
                 
@@ -472,7 +471,7 @@ const Schedule: React.FC<ScheduleProps> = ({ onChange }) => {
                         id="hour"
                         name="hour"
                         autoComplete="hour"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6 p-5"
                         onChange={(e) => onChange(e.target.name, e.target.value)}
                         />
                 </div>
@@ -480,9 +479,9 @@ const Schedule: React.FC<ScheduleProps> = ({ onChange }) => {
 
             <div className="sm:col-span-6">
 
-                <label className="flex mb-2 text-sm font-medium text-gray-900 dark:text-white">Aditional information</label>
+                <label className="flex mb-2 text-sm font-orelega text-gray-900">Aditional information</label>
 
-                <textarea id="message" rows={5} className="block p-2 w-full text-lg text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..." onChange={(e) => onChange(e.target.name, e.target.value)}></textarea>
+                <textarea id="message" rows={5} className="block p-2 w-full text-lg text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 p-5" placeholder="Leave a comment..." onChange={(e) => onChange(e.target.name, e.target.value)}></textarea>
 
             </div>
 

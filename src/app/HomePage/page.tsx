@@ -2,18 +2,20 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import imagem from'../../../public/assets/HomePage/logo-removebg-preview.png'
+
 export default function HomePage() {
 
     return (
 
-        <section className="max-w-[1280px] h-[50rem] md:h-full">
+        <section className="max-w-[1280px] h-[50rem] md:h-full bg-quinta">
 
             <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
                 
                 <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
 
                         <div className="text-start">
-                            <h1 className="text-6xl font-orelega leading-none"> Trust,
+                            <h1 className="text-6xl font-orelega leading-none text-[#47667B]"> Trust,
                                 <span> builds,</span> bridges
                             </h1>
                         </div>
@@ -21,7 +23,7 @@ export default function HomePage() {
                         <div>
 
                             <Image 
-                                src="/assets/HomePage/logo.png" 
+                                src="/assets/HomePage/logo-removebg-preview.png" 
                                 alt="Logo da empresa" 
                                 className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 md:hidden"
                                 width={500}
@@ -53,7 +55,7 @@ export default function HomePage() {
                 <div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
 
                     <Image 
-                    src="/assets/HomePage/logo.png" 
+                    src="/assets/HomePage/logo-removebg-preview.png" 
                     alt="Logo da empresa" 
                     className="object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 hidden md:flex"
                     width={500}

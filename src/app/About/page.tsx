@@ -85,7 +85,7 @@ export default function About() {
 
                                 <div className="ml-4">
                                     
-                                    <h4 className="text-2xl font-orelega leading-6 dark:text-gray-900">Choose the day and time</h4>
+                                    <h4 className="text-2xl font-orelega leading-6">Choose the day and time</h4>
                                     
                                     <p className="mt-2 font-sen">Our schedules are flexible to meet your needs.</p>
 

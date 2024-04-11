@@ -1,12 +1,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import './style.css'
 
 export  default function Testimonial(){
 
     return (
 
-        <section className="bg-terceira px-3 md:px-10">
+        <section className="bg-quinta px-3 md:px-10">
             
             <div className="container py-12 mx-auto">
                 
@@ -14,7 +15,7 @@ export  default function Testimonial(){
                     
                     <div className="max-w-2xl mx-auto my-8 space-y-4 xl:col-span-2 xl:text-left px-5 md:px-0">
                         
-                        <h2 className="text-5xl md:text-6xl font-orelega mb-10 text-white">What our customers are saying about us</h2>
+                        <h2 className="text-5xl md:text-6xl font-orelega mb-10 text-sexta text-[#47667B]">What our customers are saying about us</h2>
                         
                         <p className="text-sen text-xl">We encourage you to explore our customers' opinions in the feedback posts, where you can see how their valuable insights help us to continuously evolve and improve.</p>
 
@@ -38,8 +39,26 @@ export  default function Testimonial(){
                         <div className="grid gap-4 md:grid-cols-2">
                             
                             <div className="grid content-center gap-4">
+
+                                
                                 
                                 <div className="p-6 rounded shadow-md bg-white">
+
+                                    <div className="flex">
+                                        <div className="rating">
+                                            <input value="5" name="rate" id="star5" type="radio"/>
+                                            <label title="text"></label>
+                                            <input value="4" name="rate" id="star4" type="radio"/>
+                                            <label title="text"></label>
+                                            <input value="3" name="rate" id="star3" type="radio" />
+                                            <label title="text"></label>
+                                            <input value="2" name="rate" id="star2" type="radio"/>
+                                            <label title="text"></label>
+                                            <input value="1" name="rate" id="star1" type="radio"/>
+                                            <label title="text"></label>
+    
+                                        </div>
+                                    </div>
                                     
                                     <p className="text-sen">I would like to congratulate everyone on the wonderful job done in my home. The cleaning was thorough, leaving the environment more pleasant and welcoming. I greatly appreciate the dedication and effort from all of you.</p>
                                     
@@ -61,6 +80,22 @@ export  default function Testimonial(){
                                 </div>
 
                                 <div className="p-6 rounded shadow-md bg-white">
+
+                                <div className="flex">
+                                        <div className="rating">
+                                            <input value="5" name="rate" id="star5" type="radio"/>
+                                            <label title="text"></label>
+                                            <input value="4" name="rate" id="star4" type="radio"/>
+                                            <label title="text"></label>
+                                            <input value="3" name="rate" id="star3" type="radio" />
+                                            <label title="text"></label>
+                                            <input value="2" name="rate" id="star2" type="radio"/>
+                                            <label title="text"></label>
+                                            <input value="1" name="rate" id="star1" type="radio"/>
+                                            <label title="text"></label>
+    
+                                        </div>
+                                    </div>
                                     
                                     <p className="text-sen">The quality of the service was exceptional, and the professionalism of the team was something that really caught my attention. Everything was clean and organized beyond my expectations.</p>
                                     
@@ -85,6 +120,20 @@ export  default function Testimonial(){
                             <div className="grid content-center gap-4">
                                 
                                 <div className="p-6 rounded shadow-md bg-white">
+
+                                <div className="flex">
+                                        <div className="rating">
+                                            <input value="5" name="rate" id="star5" type="radio"/>
+                                            <label title="text"></label>
+                                            <input value="4" name="rate" id="star4" type="radio"/>
+                                            <label title="text"></label>
+                                            <input value="3" name="rate" id="star3" type="radio" />
+                                            <label title="text"></label>
+                                            <input value="2" name="rate" id="star2" type="radio"/>
+                                            <label title="text"></label>
+    
+                                        </div>
+                                    </div>
                                     
                                     <p className="text-sen">I would like to thank you for the service provided in my home. I was very satisfied with the overall result. The cleaning was done in a very efficient and swift manner. The team was extremely professional and courteous. Thank you very much for your attention, and until next time.</p>
                                     
@@ -106,6 +155,22 @@ export  default function Testimonial(){
                                 </div>
 
                                 <div className="p-6 rounded shadow-md bg-white">
+
+                                <div className="flex">
+                                        <div className="rating">
+                                            <input value="5" name="rate" id="star5" type="radio"/>
+                                            <label title="text"></label>
+                                            <input value="4" name="rate" id="star4" type="radio"/>
+                                            <label title="text"></label>
+                                            <input value="3" name="rate" id="star3" type="radio" />
+                                            <label title="text"></label>
+                                            <input value="2" name="rate" id="star2" type="radio"/>
+                                            <label title="text"></label>
+                                            <input value="1" name="rate" id="star1" type="radio"/>
+                                            <label title="text"></label>
+    
+                                        </div>
+                                    </div>
                                     
                                     <p className="text-sen">I want to express my gratitude for the excellent cleaning service provided at my residence. The team's dedication and attention to detail were remarkable. Every corner of the house was impeccable, which truly exceeded my expectations.</p>
 
@@ -125,6 +190,7 @@ export  default function Testimonial(){
                                         </div>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>

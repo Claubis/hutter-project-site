@@ -27,6 +27,8 @@ export default function Contact(){
                         <form 
                         action="post"
                         name="form-contact"
+                        data-netlify="true"
+                        netlify-honeypot="bot-field"
                         className="self-stretch space-y-3">
                             
                             <div className="bg-white rounded-md">

@@ -74,14 +74,13 @@ export default function FormFeedback(){
     };
 
       
-
     return(
 
-        <div className="bg-quarta min-h-full md:flex md:justify-center">
+        <div className="bg-quinta min-h-full md:flex md:justify-center">
 
             <div className="w-[100%] md:pl-10 flex flex-col justify-center gap-10 p-10">
 
-                    <h1 className="text-6xl font-orelega tracking-tight text-[#FFFDE0] uppercase mt-20 md:mt-0">We wish to know your opinion!</h1>
+                    <h1 className="text-6xl font-orelega tracking-tight text-[#47667B] uppercase mt-20 md:mt-0">We wish to know your opinion!</h1>
 
                     <h2 className="mt-2 text-lg md:text-2xl leading-8 font-sen">Our questionnaire is designed to enhance our offerings, ensuring your home is more comfortable and secure.</h2>
 
@@ -103,18 +102,18 @@ export default function FormFeedback(){
             <div className="w-[100%] bg-[#FFFFF] p-10">
 
                 <form
-                action="post"
                 id='form-feedback'
-                name="form-feedback-new-version"
+                name="form-feedback"
                 method="post"
                 data-netlify="true"
+                netlify-honeypot="bot-field"
                 onSubmit={handleFeedbackFormSubmit}
-                className="w-[100%] md:w-[80%] mx-auto bg-[#FFFEE6] rounded-lg p-10 grid-cols-* md:mt-20" 
+                className="w-[100%] md:w-[80%] mx-auto bg-primeira rounded-lg p-10 grid-cols-* md:mt-20"
                 >
 
                         <div>
                             
-                            <label className="block mb-2 text-sm font-medium text-gray-900 ">Name</label>
+                            <label className="block mb-2 text-xl font-sen text-white ">Name</label>
                             
                             <input 
                             id='name'
@@ -128,7 +127,7 @@ export default function FormFeedback(){
                         
                         <div className="mx-auto mt-10"> 
 
-                            <label className="block mb-2 text-sm font-medium text-gray-900">Your email</label>
+                            <label className="block mb-2 text-xl font-sen text-white">Your email</label>
 
                             <input 
                             id="email"
@@ -159,7 +158,7 @@ export default function FormFeedback(){
                         
                         <div className="mx-auto mt-20">
 
-                            <label className="block mb-2 text-sm font-medium text-gray-900">Your message</label>
+                            <label className="block mb-2 text-xl font-sen text-white">Your message</label>
 
                             <textarea 
                             name='message' 
@@ -173,13 +172,14 @@ export default function FormFeedback(){
 
                         <div className='flex justify-center text-center mt-10'>
                         
-                        <div data-netlify-recaptcha="true">
-                            <button
-                            className='rounded-md bg-[#A5C3A7] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#D5E0B5] hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-[100%] md:w-[100%]' 
-                            type='submit' 
-                            id="submitBtn">Submit</button>
+                            <div>
+                                <button
+                                className='rounded-md bg-quarta px-3.5 py-2.5 text-xl font-sen text-black shadow-sm hover:bg-terceira hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-[100%] md:w-[100%]' 
+                                type='submit' 
+                                id="submitBtn">Submit</button>
+                            </div>
+                        
                         </div>
-                    </div>
 
                 </form>
 
