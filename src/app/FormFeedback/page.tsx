@@ -14,36 +14,7 @@ interface FormData {
 export default function FormFeedback(){
 
     const [rating, setRating] = useState(0);
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-    
-    const handleName = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setName(event.target.value);
-    };
-
-    const handleEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setEmail(event.target.value);
-    };
-
-    const handleMessage = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-        setMessage(event.target.value);
-    };
-
-    const handleFeedbackFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-
-        // Mostrar no console minhas informações
-        console.log('Dados do formulário:', { name,email, rating, message  });
-
-        // Limpar o formulário após o envio
-        setName('');
-        setEmail('');
-        setRating(0);
-        setMessage('');
-    };
-
-
+   
     type StarIconProps = {
         filled: boolean;
         onClick: () => void;
@@ -102,12 +73,9 @@ export default function FormFeedback(){
             <div className="w-[100%] bg-[#FFFFF] p-10">
 
                 <form
-                id='form-feedback'
                 name="form-feedback"
                 method="post"
                 data-netlify="true"
-                netlify-honeypot="bot-field"
-                onSubmit={handleFeedbackFormSubmit}
                 className="w-[100%] md:w-[80%] mx-auto bg-primeira rounded-lg p-10 grid-cols-* md:mt-20"
                 >
                 <input type="hidden" name="form-feedback" value="feedback"/>
@@ -121,8 +89,6 @@ export default function FormFeedback(){
                             id='name'
                             name='name' 
                             type="text"
-                            value={name} 
-                            onChange={handleName}
                             className="block w-full p-2 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 text-xs focus:ring-blue-500 focus:border-blue-500"
                             autoComplete='name'
                             />
@@ -137,8 +103,6 @@ export default function FormFeedback(){
                             id="email"
                             name='email' 
                             type="email" 
-                            value={email} 
-                            onChange={handleEmail}
                             aria-describedby="helper-text-explanation" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="name@gmail.com"
                             autoComplete='email'
                             />
@@ -170,7 +134,6 @@ export default function FormFeedback(){
                             name='message' 
                             id="message" 
                             rows={8} 
-                            value={message} onChange={handleMessage}
                             className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" 
                             placeholder="Leave a comment..."></textarea>
 
@@ -182,7 +145,7 @@ export default function FormFeedback(){
                                 <button
                                 className='rounded-md bg-quarta px-3.5 py-2.5 text-xl font-sen text-black shadow-sm hover:bg-terceira hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-[100%] md:w-[100%]' 
                                 type='submit' 
-                                id="submitBtn">Submit</button>
+                                >Submit</button>
                             </div>
                         
                         </div>
